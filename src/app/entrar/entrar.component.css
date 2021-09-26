@@ -1,0 +1,10 @@
+#img-bg{
+
+    background-image: url('../../assets/img/original-07a3b6b19bbc223a97160238d495d34e-scaled.jpg');
+
+    min-height: 695px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
