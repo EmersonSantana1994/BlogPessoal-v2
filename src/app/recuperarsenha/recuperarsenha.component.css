@@ -1,0 +1,15 @@
+.cen {
+    display: flex;
+  justify-content: center
+  }
+
+  #img-bg{
+
+    background-image: url('../../assets/img/como-registrar-uma-musica.png');
+
+    min-height: 695px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
