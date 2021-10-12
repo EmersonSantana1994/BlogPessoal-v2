@@ -1,12 +1,14 @@
-<div class="container-fluid">
+<div class="fundo" >
 
-    <div class="row bg-secondary d-flex align-items-center">
+  <div class="container-fluid">
+
+    <div class="row fundo d-flex align-items-center">
       <div class="col-md-6">
   
         <div class="row d-flex justify-content-center">
           <div class="col-md-7 text-white">
-            <h1 class="fs-54">Seja bem vindo(a)!</h1>
-            <h5 class="fs-18">expresse aqui os seus pensamentos e opniões!</h5>
+            <h1 class="fs-54 h1">Seja bem vindo(a)!</h1>
+            <h5 class="fs-20" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 30px;">Expresse aqui os seus pensamentos e opniões!</h5>
           </div>
         </div>
   
@@ -21,25 +23,25 @@
   
   
       <div class="col-md-6 d-flex justify-content-center">
-        <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px">
+        <img src="https://i.imgur.com/lyakf3E.png" alt="" width="500px" height="500px">
       </div>
     </div>
   
   </div>
   
-  <div class="container mb-5 mt-5" id="postagens"> 
+  <div class="container mb-5 mt-5 fundo2" id="postagens"> 
 
 <nav>
 
   <div class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
 
-    <a class="nav-item nav-link active text-secondary font-weight-bold" id="todaspostagens-tab" data-toggle="tab" href="#todaspostagens" role="tab" aria-controls="nav-  todaspostagens" aria-selected="true">Todas as Postagens</a>
+    <a class="nav-item nav-link active font-weight-bold" class="btn corb1 text-white" style="font-size: 20px;" id="todaspostagens-tab" data-toggle="tab" href="#todaspostagens" role="tab" aria-controls="nav-todaspostagens" aria-selected="true">Todas as Postagens</a>
     
 
-          <a (click)='findByIdUser()' class="nav-item nav-link text-secondary font-weight-bold" id="nav-minhaspostagens-tab" data-toggle="tab" href="#minhaspostagens" role="tab" aria-controls="nav-minhaspostagens" aria-selected="false">Minhas Postagens</a>
+          <a (click)='findByIdUser()' class="nav-item nav-link font-weight-bold" class="btn corb2 text-white" style="font-size: 20px;" id="nav-minhaspostagens-tab" data-toggle="tab" href="#minhaspostagens" role="tab" aria-controls="nav-minhaspostagens" aria-selected="false">Minhas Postagens</a>
         
 
-          <a class="nav-item nav-link text-secondary font-weight-bold" id="postagensportema-tab" data-toggle="tab" href="#postagensportema" role="tab" aria-controls="postagensportema" aria-selected="false">Postagens por tema</a>
+          <a class="nav-item nav-link font-weight-bold" class="btn corb3 text-white" style="font-size: 20px;" id="postagensportema-tab" data-toggle="tab" href="#postagensportema" role="tab" aria-controls="postagensportema" aria-selected="false">Postagens por tema</a>
 
 
   </div>
@@ -47,18 +49,23 @@
 </nav>
    
        
-
-          
-       
      
-      <div class="tab-content mt-5" id="nav-tabContent">
+      <div class="tab-content mt-5 fundo2" id="nav-tabContent">
 
         <div class="tab-pane fade show active" id="todaspostagens" role="tabpanel" aria-labelledby="nav-todaspostagens-tab">
 
+          <div class="row d-flex justify-content-center mt-5 mb-5">
+            <div class="col-md-4">
+              <div class="form-group">
+                <input type="text" class="form-control" id="titulo" placeholder="Digite um titulo de postagem para pesquisar" [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
+              </div>
+            </div>
+          </div>
 
 
           <div class="card-columns">
-            <div class="card text-center" *ngFor='let item of listaPostagens'>
+            <div class="card text-center"
+             *ngFor='let item of listaPostagens | orderBy : key : reverse'>
               <div class="card-body">
                 <h5 class="card-title m-0">{{item.titulo}}</h5>
                 <small class="text-muted"> Tema: {{item.tema.descricao}}</small>
@@ -79,7 +86,8 @@
         <div class="tab-pane fade show active" id="minhaspostagens" role="tabpanel" aria-labelledby="nav-minhaspostagens-tab">
 
           <div class="card-columns">
-            <div class="card text-center" *ngFor='let item of user.postagem'>
+            <div class="card text-center"
+             *ngFor='let item of user.postagem | orderBy : key : reverse'>
               <div class="card-body">
                 <h5 class="card-title m-0">{{item.titulo}}</h5>
                 <small class="text-muted"> Tema: {{item.tema.descricao}}</small>
@@ -99,8 +107,18 @@
         </div>
         <div class="tab-pane fade" id="postagensportema" role="tabpanel" aria-labelledby="postagensportema-tab">
 
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-4">
+    
+              <div class="form-group mb-5">
+                <input type="text" class="form-control" id="tituloPesquisa" placeholder="Digite um tema para pesquisar" [(ngModel)]='nomeTema' (keyup)='findByNomeTema()'>
+              </div>
+    
+            </div>
+          </div>
 
-          <div class="card-columns" *ngFor='let tema of listaTemas'>
+          <div class="card-columns" 
+          *ngFor='let tema of listaTemas | orderBy : key : reverse'>
             <div class="card text-center" *ngFor='let item of tema.postagem'>
               <div class="card-body">
                 <h5 class="card-title m-0">{{item.titulo}}</h5>
@@ -121,6 +139,11 @@
       </div>
 
   </div>
+
+</div>
+
+
+
 
  
   

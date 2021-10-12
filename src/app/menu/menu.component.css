@@ -7,3 +7,27 @@ a{
 
     cursor: pointer;
 }
+
+.cor1 {
+
+    background-color: rgb(29, 53, 160);
+}
+
+.h1 {
+    
+    font-size: 60px;
+    font-style: oblique;
+    color: aliceblue;
+    text-shadow: 0 1px 0 rgb(0, 0, 0),
+    0 2px 0 #000000,
+    0 3px 0 #000000,
+    0 4px 0 #0d0ac5,
+    0 5px 0 rgb(5, 41, 247),
+    0 6px 1px rgba(226, 223, 14, 0.986),
+    0 0 5px rgb(131, 145, 150),
+    0 1px 3px rgba(0, 0, 0, 0.651),
+    0 3px 5px rgb(2, 39, 250),
+    0 5px 10px rgb(1, 238, 255),
+    0 10px 10px rgb(5, 26, 95),
+    0 20px 20px rgb(1, 11, 104);
+    }
