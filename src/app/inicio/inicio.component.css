@@ -1,1 +1,50 @@
+.fundo{
+    background-image: linear-gradient(to right top, #0012ff, #005aff, #007cff, #0096f7, #00abe0, #55b7df, #7cc3df, #9ecee0, #bcd8ec, #b1cbeb, #3651ca, #031657);
+}
 
+.fundo2{
+
+    background-color: rgb(6, 20, 148);
+
+}
+
+.corb1{
+
+    background-color: rgb(128, 85, 156);
+}
+
+.corb2{
+
+    background-color: rgb(3, 82, 26);
+}
+
+.corb3{
+
+    background-color: rgb(5, 34, 196);
+}
+
+.h2 {
+
+    background-image: linear-gradient(to right top, #e5f7fa, #e2f2f4, #e0edee, #dde8e8, #dbe3e3, #dbe3e3, #dbe2e2, #dbe2e2, #dde6e6, #dfeaeb, #e1eeef, #e3f2f4);
+}
+
+.h1 {
+    
+    font-size: 60px;
+    font-style: oblique;
+    color: aliceblue;
+    text-shadow: 0 1px 0 rgb(0, 0, 0),
+    0 2px 0 #000000,
+    0 3px 0 #000000,
+    0 4px 0 #0d0ac5,
+    0 5px 0 rgb(5, 41, 247),
+    0 6px 1px rgba(226, 223, 14, 0.986),
+    0 0 5px rgb(131, 145, 150),
+    0 1px 3px rgba(0, 0, 0, 0.651),
+    0 3px 5px rgb(2, 39, 250),
+    0 5px 10px rgb(1, 238, 255),
+    0 10px 10px rgb(5, 26, 95),
+    0 20px 20px rgb(1, 11, 104);
+    }
+
+    

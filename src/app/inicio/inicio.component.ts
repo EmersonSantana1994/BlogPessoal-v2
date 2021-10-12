@@ -1,4 +1,5 @@
 
+import { AlertasService } from './../service/alertas.service';
 import { AuthService } from './../service/auth.service';
 import { User } from './../model/User';
 import { Tema } from './../model/Tema';
@@ -28,7 +29,7 @@ export class InicioComponent implements OnInit {
   user: User = new User()
   idUser = environment.id
 
-  key = 'data'
+  key = 'date'
   reverse = true
 
   constructor(
@@ -36,7 +37,7 @@ export class InicioComponent implements OnInit {
     private postagemService: PostagemService,
     private temaService: TemaService,
     public authService: AuthService,
-
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -85,6 +86,7 @@ export class InicioComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
